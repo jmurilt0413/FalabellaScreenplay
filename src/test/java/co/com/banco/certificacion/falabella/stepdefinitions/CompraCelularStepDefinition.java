@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class CompraCelularStepDefinition {
 
-  @Dado("René ingresa a la pagina de {word} desde el buscador de google")
+  @Dado("René ingresa a la página de {word} desde el buscador de Google")
   public void ingresarPaginaDesdeGoogle(String nombrePagina) {
   }
 
@@ -16,7 +16,7 @@ public class CompraCelularStepDefinition {
   public void filtrarArticulo(String nombreArticulo) {
   }
 
-  @Y("selecciona el celular {string}")
+  @Y("selecciona el artículo {string}")
   public void seleccionarArticulo(String referenciaArticulo) {
   }
 
