@@ -1,5 +1,5 @@
 ## Tabla de contenido
-1. [Informacion general](#Información general)
+1. [Información general](Información general)
 2. [Tecnologías](Tecnologías)
 3. [Ejecución](Ejecución)
 ### Información general
