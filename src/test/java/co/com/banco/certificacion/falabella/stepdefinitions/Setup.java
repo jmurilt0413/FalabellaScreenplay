@@ -1,4 +1,4 @@
-package co.com.banco.certificacion.fallabela.stepdefinitions;
+package co.com.banco.certificacion.falabella.stepdefinitions;
 
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 

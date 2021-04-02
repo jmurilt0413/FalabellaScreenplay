@@ -22,7 +22,7 @@ apply plugin: 'idea'
 apply plugin: 'eclipse'
 apply plugin: 'net.serenity-bdd.aggregator'
 
-group 'co.com.banco.certificacion.fallabela'
+group 'co.com.banco.certificacion.falabella'
 sourceCompatibility = 1.8
 
 repositories {

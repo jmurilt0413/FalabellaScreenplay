@@ -1,4 +1,4 @@
-package co.com.banco.certificacion.fallabela.runners;
+package co.com.banco.certificacion.falabella.runners;
 
 import io.cucumber.junit.CucumberOptions;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
