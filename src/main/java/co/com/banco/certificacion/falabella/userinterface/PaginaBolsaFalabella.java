@@ -11,4 +11,7 @@ public final class PaginaBolsaFalabella {
       .locatedBy(
           "//*[@class='fb-warranty-dropdown fb-inline-dropdown__link js-inline-dropdown__link']");
 
+public static final Target OPCION_COBERTURAS_SEGURO = Target.the("Opción cobertura seguro")
+      .locatedBy(
+          "//*[@class='fb-inline-dropdown__item-link' and contains(text(),'{0}')]");
 }

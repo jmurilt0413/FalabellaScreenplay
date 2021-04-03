@@ -22,4 +22,7 @@ public static final Target LBL_MARCA_EMPRESA = Target.the("Nombre celular")
   public static final Target PRECIOS_RESUMEN = Target.the("Codigo productos")
       .locatedBy("//*[@class='fbra_text fbra_test_orderSummary__itemPrice fbra_orderSummary__itemPrice' and contains(text(),'{0}')]");
 
+  public static final Target TABLA_RESUMEN = Target.the("Resumen completo")
+      .locatedBy("//*[@class='fbra_section fbra_orderSummary']");
+
 }

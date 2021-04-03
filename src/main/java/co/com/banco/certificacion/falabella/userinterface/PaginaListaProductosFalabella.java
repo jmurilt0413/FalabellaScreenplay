@@ -18,7 +18,4 @@ public final class PaginaListaProductosFalabella {
   public static final Target BTN_VER_BOLSA_COMPRAS = Target.the("Boton ver bolsa de compras")
       .located(By.id("linkButton"));
 
-  public static final Target BTN_ASEGURAR_PRODUCTO = Target.the("Asegurar producto")
-      .locatedBy("//span[@class='jsx-2662861071 label  ' and contains(text(), '{0}')]");
-
 }
