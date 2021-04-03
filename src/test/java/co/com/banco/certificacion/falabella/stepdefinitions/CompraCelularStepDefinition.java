@@ -4,6 +4,7 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 import co.com.banco.certificacion.falabella.tasks.FiltrarCompra;
 import co.com.banco.certificacion.falabella.tasks.IngresarDesdeGoogle;
+import co.com.banco.certificacion.falabella.tasks.AgregarCompraArticulo;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
@@ -22,13 +23,10 @@ public class CompraCelularStepDefinition {
     theActorInTheSpotlight().attemptsTo(FiltrarCompra.porArticulo(nombreProducto));
   }
 
-  @Y("selecciona el artículo {string}")
-  public void seleccionarArticulo(String referenciaArticulo) {
-
-  }
-
-  @Y("asegura su producto con {string}")
-  public void asegurarArticulo(String coberturaArticulo) {
+  @Y("compra un {string} con seguro {string}")
+  public void agregarArticuloBolsa(String referenciaArticulo, String coberturaSeguro) {
+    theActorInTheSpotlight().attemptsTo(
+        AgregarCompraArticulo.conNombre(referenciaArticulo, coberturaSeguro));
   }
 
   @Entonces("el resumen de la orden es")
