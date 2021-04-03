@@ -7,5 +7,5 @@ import org.junit.runner.RunWith;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
     features = "src/test/resources/features/compras/compra_celular.feature",
-    glue = "co.com.banco.certificacion.fallabela.stepdefinitions")
+    glue = "co.com.banco.certificacion.falabella.stepdefinitions")
 public class CompraCelularRunner {}

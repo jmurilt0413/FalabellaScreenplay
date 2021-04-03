@@ -45,7 +45,8 @@ serenity {
 dependencies {
     implementation group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.25'
     implementation "net.serenity-bdd:serenity-core:${serenityCoreVersion}",
-            "net.serenity-bdd:serenity-screenplay:${serenityCoreVersion}"
+            "net.serenity-bdd:serenity-screenplay:${serenityCoreVersion}",
+            "net.serenity-bdd:serenity-screenplay-rest:${serenityCoreVersion}",
             "net.serenity-bdd:serenity-screenplay-webdriver:${serenityCoreVersion}"
     testImplementation "net.serenity-bdd:serenity-cucumber5:${serenityCucumberVersion}",
             "junit:junit:${junitVersion}",

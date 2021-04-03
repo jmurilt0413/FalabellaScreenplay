@@ -6,8 +6,8 @@ Característica: Validar la compra de un celular en Falabella
   para verificar el valor del mismo y el valor de protección de pantalla
 
   Escenario: Validar la compra de un celular en Fallabela
-    Dado René ingresa a la página de Fallabela desde el buscador de Google
-    Cuando filtra por celulares
+    Dado René ingresa a la página de Falabella desde el buscador de Google
+    Cuando René busca por celulares
     Y selecciona el artículo "Celular xiaomi redmi note 9 pro 64gb 6gb"
     Y asegura su producto con "asegura tu pantalla"
     Entonces el resumen de la orden es
