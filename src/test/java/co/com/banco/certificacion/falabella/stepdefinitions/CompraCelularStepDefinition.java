@@ -18,18 +18,21 @@ import co.com.banco.certificacion.falabella.questions.PrecioSeguroArticulo;
 import co.com.banco.certificacion.falabella.questions.PrecioTotalArticulo;
 import co.com.banco.certificacion.falabella.tasks.AgregarArticuloDespacho;
 import co.com.banco.certificacion.falabella.tasks.FiltrarCompra;
-import co.com.banco.certificacion.falabella.tasks.IngresarPaginaDesdeGoogle;
+import co.com.banco.certificacion.falabella.tasks.IngresarPaginaDesdeBuscadorGoogle;
+import co.com.banco.certificacion.falabella.userinterface.PaginaInicioGoogle;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.E;
 import io.cucumber.java.es.Entonces;
 import java.util.Map;
+import net.serenitybdd.screenplay.actions.Open;
 
 public class CompraCelularStepDefinition {
 
   @Dado("que René ingresa a la página de {word} desde el buscador de Google")
   public void ingresarPaginaDesdeGoogle(String nombrePagina) {
-    theActorInTheSpotlight().attemptsTo(IngresarPaginaDesdeGoogle.Pagina(nombrePagina));
+    theActorInTheSpotlight().attemptsTo(Open.browserOn().the(PaginaInicioGoogle.class));
+    theActorInTheSpotlight().attemptsTo(IngresarPaginaDesdeBuscadorGoogle.Pagina(nombrePagina));
   }
 
   @Cuando("René busca por {word}")

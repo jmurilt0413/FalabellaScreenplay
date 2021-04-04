@@ -13,17 +13,17 @@ import net.serenitybdd.screenplay.actions.Enter;
 import org.openqa.selenium.Keys;
 
 
-public class IngresarPaginaDesdeGoogle implements Task {
+public class IngresarPaginaDesdeBuscadorGoogle implements Task {
 
   private final String nombrePagina;
 
-  public IngresarPaginaDesdeGoogle(String nombrePagina) {
+  public IngresarPaginaDesdeBuscadorGoogle(String nombrePagina) {
     this.nombrePagina = nombrePagina;
   }
 
 
-  public static IngresarPaginaDesdeGoogle Pagina(String nombrePagina) {
-    return instrumented(IngresarPaginaDesdeGoogle.class, nombrePagina);
+  public static IngresarPaginaDesdeBuscadorGoogle Pagina(String nombrePagina) {
+    return instrumented(IngresarPaginaDesdeBuscadorGoogle.class, nombrePagina);
   }
 
   @Override
