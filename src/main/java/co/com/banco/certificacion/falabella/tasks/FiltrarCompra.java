@@ -1,12 +1,13 @@
 package co.com.banco.certificacion.falabella.tasks;
 
+import static co.com.banco.certificacion.falabella.userinterface.PaginaInicioFalabella.LBL_ARTICULO;
 import static co.com.banco.certificacion.falabella.userinterface.PaginaInicioFalabella.TXT_BOX_BUSCAR;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
+import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
-import org.openqa.selenium.Keys;
 
 public class FiltrarCompra implements Task {
 
@@ -23,6 +24,7 @@ public class FiltrarCompra implements Task {
   @Override
   public <T extends Actor> void performAs(T actor) {
     actor.attemptsTo(
-        Enter.theValue(nombreProducto).into(TXT_BOX_BUSCAR).thenHit(Keys.ENTER));
+        Enter.theValue(nombreProducto).into(TXT_BOX_BUSCAR),
+        Click.on(LBL_ARTICULO));
   }
 }

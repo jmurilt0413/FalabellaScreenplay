@@ -6,10 +6,10 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 
-public class PrecioSeguro implements Question<String> {
+public class PrecioSeguroArticulo implements Question<String> {
 
-  public static PrecioSeguro valor() {
-    return new PrecioSeguro();
+  public static PrecioSeguroArticulo valor() {
+    return new PrecioSeguroArticulo();
   }
 
   @Override

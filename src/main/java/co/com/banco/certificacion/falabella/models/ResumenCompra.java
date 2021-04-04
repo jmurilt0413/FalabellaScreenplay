@@ -26,69 +26,12 @@ public class ResumenCompra {
     this.codigo = codigo;
   }
 
-  private String nombreCecular;
-
-  public String getNombreCecular() {
-    return nombreCecular;
-  }
-
-  public void setNombreCecular(String nombreCecular) {
-    this.nombreCecular = nombreCecular;
-  }
-
-  public String getMarcaEmpresa() {
-    return marcaEmpresa;
-  }
-
-  public void setMarcaEmpresa(String marcaEmpresa) {
-    this.marcaEmpresa = marcaEmpresa;
-  }
-
-  public String getValorTotal() {
-    return valorTotal;
-  }
-
-  public void setValorTotal(String valorTotal) {
-    this.valorTotal = valorTotal;
-  }
-
-  public String getValorCelular() {
-    return valorCelular;
-  }
-
-  public void setValorCelular(String valorCelular) {
-    this.valorCelular = valorCelular;
-  }
-
-  public String getValorSeguro() {
-    return valorSeguro;
-  }
-
-  public void setValorSeguro(String valorSeguro) {
-    this.valorSeguro = valorSeguro;
-  }
-
-  public String getCantidadProducto() {
-    return cantidadProducto;
-  }
-
-  public void setCantidadProducto(String cantidadProducto) {
-    this.cantidadProducto = cantidadProducto;
-  }
-
-  public String getCodigo() {
-    return codigo;
-  }
-
-  public void setCodigo(String codigo) {
-    this.codigo = codigo;
-  }
-
-  private String marcaEmpresa;
-  private String valorTotal;
-  private String valorCelular;
-  private String valorSeguro;
-  private String cantidadProducto;
-  private String codigo;
+  private final String nombreCecular;
+  private final String marcaEmpresa;
+  private final String valorTotal;
+  private final String valorCelular;
+  private final String valorSeguro;
+  private final String cantidadProducto;
+  private final String codigo;
 
 }

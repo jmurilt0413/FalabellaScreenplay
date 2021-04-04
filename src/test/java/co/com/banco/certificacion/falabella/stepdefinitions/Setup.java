@@ -2,8 +2,8 @@ package co.com.banco.certificacion.falabella.stepdefinitions;
 
 import static co.com.banco.certificacion.falabella.userinterface.PaginaDespachoFalabella.LBL_CANTIDAD_PRODUCTOS;
 import static co.com.banco.certificacion.falabella.userinterface.PaginaDespachoFalabella.LBL_CODIGO_PRODUCTO;
-import static co.com.banco.certificacion.falabella.userinterface.PaginaDespachoFalabella.LBL_MARCA_EMPRESA;
-import static co.com.banco.certificacion.falabella.userinterface.PaginaDespachoFalabella.LBL_NOMBRE_CELULAR;
+import static co.com.banco.certificacion.falabella.userinterface.PaginaDespachoFalabella.LBL_MARCA_CELULAR;
+import static co.com.banco.certificacion.falabella.userinterface.PaginaDespachoFalabella.LBL_REFERENCIA_CELULAR;
 import static co.com.banco.certificacion.falabella.userinterface.PaginaDespachoFalabella.LBL_PRECIOS_RESUMEN;
 import static co.com.banco.certificacion.falabella.userinterface.PaginaDespachoFalabella.LBL_PRECIO_TOTAL_ARTICULO;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
@@ -25,7 +25,6 @@ import org.openqa.selenium.WebDriver;
 
 public class Setup {
 
-
   @Managed(driver = "chrome")
   public WebDriver driver;
 
@@ -46,8 +45,8 @@ public class Setup {
   public void imprimirDatosSolicitadosConsola() {
     Logger.info("ResumenCompra.class",
         new ResumenCompra(
-            LBL_NOMBRE_CELULAR.resolveFor(theActorInTheSpotlight()).getText(),
-            LBL_MARCA_EMPRESA.resolveFor(theActorInTheSpotlight()).getText(),
+            LBL_REFERENCIA_CELULAR.resolveFor(theActorInTheSpotlight()).getText(),
+            LBL_MARCA_CELULAR.resolveFor(theActorInTheSpotlight()).getText(),
             LBL_PRECIO_TOTAL_ARTICULO.resolveFor(theActorInTheSpotlight()).getText(),
             LBL_PRECIOS_RESUMEN.resolveAllFor(theActorInTheSpotlight()).get(0).getText(),
             LBL_PRECIOS_RESUMEN.resolveAllFor(theActorInTheSpotlight()).get(1).getText(),
@@ -55,5 +54,4 @@ public class Setup {
                 .replace(")", ""),
             LBL_CODIGO_PRODUCTO.resolveFor(theActorInTheSpotlight()).getText()).toString());
   }
-
 }

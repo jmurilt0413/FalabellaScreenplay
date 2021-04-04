@@ -6,7 +6,7 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 public class PrecioArticuloIncorrecto extends AssertionError {
 
   public static final String MENSAJE_PRECIO_ARTICULO_INCORRECTO =
-      "Los precios del articulo no coinciden. Valor actual" + LBL_PRECIOS_RESUMEN
+      "El precio del articulo no es igual al esperado. Valor actual " + LBL_PRECIOS_RESUMEN
           .resolveAllFor(theActorInTheSpotlight()).get(0)
           .getText().replace("$", "");
 

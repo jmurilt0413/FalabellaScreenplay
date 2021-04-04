@@ -10,7 +10,7 @@ Característica: Validar la compra de un celular en Falabella
     Cuando René busca por celulares
     E inicia una intención de compra para un "Celular xiaomi poco x3 64gb 6gb ram gris" con seguro "Asegura tu Pantalla"
     Entonces el resumen de la orden es
-      | Nombre Celular        | Celular xiaomi poco x3 64gb 6gb ram gris |
+      | Referencia celular    | Celular xiaomi poco x3 64gb 6gb ram gris |
       | Marca                 | XIAOMI                                   |
       | Valor total           | 1.399.800                                |
       | Valor celular         | 1.299.900                                |

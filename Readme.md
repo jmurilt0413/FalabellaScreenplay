@@ -28,5 +28,9 @@ Se debe seguir los siguientes pasos
 * Se puede ejecutar todo el proyecto desde la terminal de gradle con el
   comando $gradle clean test
 
+* Ejecutar la clase CompraCelularRunner en intelliJ, puede correr con gradle
+  o Junit
+
+* El reporte quedan en la ruta: target\site\serenity\index.html
 
 ```

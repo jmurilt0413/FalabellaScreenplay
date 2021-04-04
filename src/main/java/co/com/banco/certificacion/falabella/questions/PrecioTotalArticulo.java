@@ -5,10 +5,10 @@ import static co.com.banco.certificacion.falabella.userinterface.PaginaDespachoF
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 
-public class PrecioTotal implements Question<String> {
+public class PrecioTotalArticulo implements Question<String> {
 
-  public static PrecioTotal valor() {
-    return new PrecioTotal();
+  public static PrecioTotalArticulo valor() {
+    return new PrecioTotalArticulo();
   }
 
   @Override
