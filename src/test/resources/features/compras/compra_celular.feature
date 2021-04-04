@@ -3,12 +3,12 @@
 Característica: Validar la compra de un celular en Falabella
   Yo como usuario de Falabella
   deseo comprar un celular
-  para verificar el valor del mismo y el valor de protección de pantalla
+  para verificar el estado del resumen de la orden
 
-  Escenario: Validar la compra de un celular en Falabella
+  Escenario: Validar el resumen de la orden para la compra de un celular
     Dado que René ingresa a la página de Falabella desde el buscador de Google
     Cuando René busca por celulares
-    Y compra un "Celular xiaomi poco x3 64gb 6gb ram gris" con seguro "Asegura tu Pantalla"
+    E inicia una intención de compra para un "Celular xiaomi poco x3 64gb 6gb ram gris" con seguro "Asegura tu Pantalla"
     Entonces el resumen de la orden es
       | Nombre Celular        | Celular xiaomi poco x3 64gb 6gb ram gris |
       | Marca                 | XIAOMI                                   |

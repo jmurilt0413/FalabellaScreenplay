@@ -21,8 +21,8 @@ import co.com.banco.certificacion.falabella.tasks.FiltrarCompra;
 import co.com.banco.certificacion.falabella.tasks.IngresarDesdeGoogle;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
+import io.cucumber.java.es.E;
 import io.cucumber.java.es.Entonces;
-import io.cucumber.java.es.Y;
 import java.util.Map;
 
 public class CompraCelularStepDefinition {
@@ -37,7 +37,7 @@ public class CompraCelularStepDefinition {
     theActorInTheSpotlight().attemptsTo(FiltrarCompra.porArticulo(nombreProducto));
   }
 
-  @Y("compra un {string} con seguro {string}")
+  @E("inicia una intención de compra para un {string} con seguro {string}")
   public void agregarArticuloBolsa(String referenciaArticulo, String coberturaSeguro) {
     theActorInTheSpotlight().attemptsTo(
         AgregarCompraArticulo.conNombre(referenciaArticulo, coberturaSeguro));
@@ -45,21 +45,19 @@ public class CompraCelularStepDefinition {
 
   @Entonces("el resumen de la orden es")
   public void validarResumenOrden(Map<String, String> resumenOrden) {
-    theActorInTheSpotlight().should(
+    then(theActorInTheSpotlight()).should(
         seeThat(
-            PrecioArticulo.conValor(resumenOrden.get("Valor celular")), equalTo(true)).orComplainWith(
+            PrecioArticulo.valor(), equalTo(resumenOrden.get("Valor celular"))).orComplainWith(
             PrecioArticuloIncorrecto.class, MENSAJE_PRECIO_ARTICULO_INCORRECTO),
         seeThat(
-            PrecioSeguro.conValor(resumenOrden.get("Valor seguro")), equalTo(true)).orComplainWith(
-            PrecioSeguroIncorrecto.class, MENSAJE_PRECIO_SEGURO_INCORRECTO));
-
-    then(theActorInTheSpotlight()).should(
+            PrecioSeguro.valor(), equalTo(resumenOrden.get("Valor seguro"))).orComplainWith(
+            PrecioSeguroIncorrecto.class, MENSAJE_PRECIO_SEGURO_INCORRECTO),
         seeThat(
             Nombre.celular(), equalTo(resumenOrden.get("Nombre Celular"))),
         seeThat(
             Marca.empresa(), equalTo(resumenOrden.get("Marca"))),
         seeThat(
-            PrecioTotal.conValor(), equalTo(resumenOrden.get("Valor total"))),
+            PrecioTotal.valor(), equalTo(resumenOrden.get("Valor total"))),
         seeThat(
             Cantidad.productos(), equalTo(resumenOrden.get("Cantidad de productos"))),
         seeThat(

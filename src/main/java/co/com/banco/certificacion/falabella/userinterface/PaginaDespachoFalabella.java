@@ -16,13 +16,14 @@ public static final Target LBL_MARCA_EMPRESA = Target.the("Nombre celular")
   public static final Target LBL_CODIGO_PRODUCTO = Target.the("Codigo productos")
       .locatedBy("//*[@class='fbra_text fbra_orderSummary__itemProperty--no-capital fbra_test_orderSummary__quantity_and_sku']");
 
-  public static final Target PRECIO_TOTAL_ARTICULO = Target.the("Codigo productos")
+  public static final Target LBL_PRECIO_TOTAL_ARTICULO = Target.the("Precio total artículo")
       .locatedBy("//*[@class='fbra_text fbra_test_orderSummary__totalCostPrice fbra_orderSummary__totalCostPrice']");
 
-  public static final Target PRECIOS_RESUMEN = Target.the("Codigo productos")
+  public static final Target LBL_PRECIOS_RESUMEN = Target.the("Precio total artículo")
+      .locatedBy("//*[@class='fbra_text fbra_test_orderSummary__itemPrice fbra_orderSummary__itemPrice']");
+
+  public static final Target LBL_PRECIOS_RESUMEN_2 = Target.the("Precios detalle")
       .locatedBy("//*[@class='fbra_text fbra_test_orderSummary__itemPrice fbra_orderSummary__itemPrice' and contains(text(),'{0}')]");
 
-  public static final Target TABLA_RESUMEN = Target.the("Resumen completo")
-      .locatedBy("//*[@class='fbra_section fbra_orderSummary']");
 
 }

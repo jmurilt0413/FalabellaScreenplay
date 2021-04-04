@@ -1,27 +1,20 @@
 package co.com.banco.certificacion.falabella.questions;
 
-import static co.com.banco.certificacion.falabella.userinterface.PaginaDespachoFalabella.PRECIOS_RESUMEN;
-import static co.com.banco.certificacion.falabella.utils.enums.EnumVariableSesion.PRECIO_SEGURO_PAGINA;
+import static co.com.banco.certificacion.falabella.userinterface.PaginaDespachoFalabella.LBL_PRECIOS_RESUMEN;
+import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 
-public class PrecioSeguro implements Question<Boolean> {
+public class PrecioSeguro implements Question<String> {
 
-  private String precioSeguro;
-
-  public PrecioSeguro(String precioSeguro) {
-    this.precioSeguro = precioSeguro;
-  }
-
-  public static PrecioSeguro conValor(String precioSeguro) {
-    return new PrecioSeguro(precioSeguro);
+  public static PrecioSeguro valor() {
+    return new PrecioSeguro();
   }
 
   @Override
-  public Boolean answeredBy(Actor actor) {
-    actor.remember(PRECIO_SEGURO_PAGINA.getVariableSesion(),
-        PRECIOS_RESUMEN.of(precioSeguro).resolveFor(actor));
-    return PRECIOS_RESUMEN.of(precioSeguro).resolveFor(actor).isVisible();
+  public String answeredBy(Actor actor) {
+    return LBL_PRECIOS_RESUMEN.resolveAllFor(theActorInTheSpotlight()).get(1)
+        .getText().replace("$", "");
   }
 }
