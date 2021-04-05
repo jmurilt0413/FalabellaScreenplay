@@ -23,6 +23,8 @@ distintivo a una de las clases.
 ## Tecnologías
 ***
 Esta es la lista de tecnologías utilizadas:
+
+* [Patron de diseño ScreenPlay](https://serenity-bdd.github.io/theserenitybook/latest/serenity-screenplay.html)
 * [Junit](https://mvnrepository.com/artifact/junit/junit/4.12) 
 * [ChromeDriver 88.0.4324.96](https://chromedriver.chromium.org/) 
 * [Serenity-Cumcumber](https://mvnrepository.com/artifact/net.serenity-bdd/serenity-cucumber/)
